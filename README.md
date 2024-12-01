@@ -19,7 +19,7 @@ If no debugging targets are available. Add them:
 
 For this app the correct target is this one:
 
-<img width="300" alt="Correct target" src="./chrome-target.png">
+<img width="550" alt="Correct target" src="./chrome-target.png">
 
 **The application's debugger url is the one running on port 9230**
 
