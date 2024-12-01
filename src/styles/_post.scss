@@ -1,0 +1,131 @@
+@import "variables.module";
+
+.postContainer {
+    margin: 5vh 0;
+    
+    hr {
+        width: 90%;
+    }
+}
+
+.postHeader {
+    display: grid;
+    grid-template-columns: max-content 1fr 1fr;
+
+    grid-template-areas:
+        "pp usrName ."
+        "pp date options";
+
+    img {
+        border-radius: 50%;
+        grid-area: pp;
+        margin: 0 15px;
+        @include makeClickable();
+    }
+    .userName {
+        grid-area: usrName;
+        font-size: 1.3rem;
+        font-weight: bold;
+        height: fit-content;
+        width: fit-content;
+        padding-top: 0.5rem;
+
+        border-radius: 10px;
+        @include makeClickable();
+    }
+    .datePosted {
+        grid-area: date;
+        font-size: 0.9rem;
+        color: $lightGray;
+    }
+    .options {
+        grid-area: options;
+
+        align-self: center;
+        justify-self: end;
+        margin-right: 10px;
+        // padding: 3px;
+        border-radius: 10px;
+        @include makeClickable();
+    }
+}
+
+.postContent {
+    margin-top: 15px;
+    padding: 0 5%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    .imageContainer {
+        position: relative;
+        
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1.6;
+        
+        @include makeClickable();
+        img{  
+            border-radius: 20px;
+        }
+    }
+
+    .engagmentBar {
+        font-size: 0.9rem;
+        margin-left: 2%;
+        margin-top: 1.5vh;
+        display: flex;
+        gap: 2vw;
+        align-items: center;
+        .engageSVGContainer{
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+            svg.engageSVG {
+                
+                width: 4vw;
+                max-width: 30px;
+                height: 4vw;
+                max-height: 30px;
+                flex: 0 0 auto;
+                
+                border-radius: 5px;
+                @include makeClickable();
+            }
+
+            div{
+                font-size: 1rem;
+            }
+        }
+    }
+    
+    
+    .postText {
+        font-size: 1.15rem;
+        margin-top: 3vh;
+        margin-left: 2%;
+    }
+    
+    .EngageNoImage{
+        grid-row: 2 / 4;
+    
+        +*{
+            // border: 2px solid red;
+            margin-top: 0%;
+        }
+    }
+}
+
+.likePressed {
+    stroke: black;
+    #Dribbble-Light-Preview {
+        fill: red;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    
+}
+
+@media (min-width: $desktop-width){
+    
+} 

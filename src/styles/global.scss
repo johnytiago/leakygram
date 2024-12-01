@@ -1,0 +1,133 @@
+@import "navbar";
+@import "post";
+@import "header";
+
+
+body {
+    >div {
+        margin-top: var(--headerHeight);
+    }
+
+    font-family: Garamond;
+    padding-bottom: 10vh;
+}
+
+.fullScreenText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.TryAgainButton {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    padding: 2% 3%;
+    background-color: $mainColor;
+    color: white;
+    font-weight: bold;
+}
+
+@media (min-width: $tablet-width) {
+
+    body {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    body {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+        width: calc(100vw - var(--headerHeight)*2);
+    }
+
+    // main{
+    //     width: 1000px;
+
+    // }
+}
+
+/* GeneratePostPage.css */
+.generate-post-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.generate-post-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.generate-post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.generate-post-form .form-group {
+    margin-bottom: 5px;
+}
+
+.generate-post-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.generate-post-form .form-control {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    padding: 9px;
+}
+
+.generate-post-form textarea.form-control {
+    height: 100px;
+    resize: vertical;
+}
+
+.generate-post-form .btn {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.generate-post-form .btn:hover {
+    background-color: #0056b3;
+}
+
+.generate-post-container .status {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image-preview {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
