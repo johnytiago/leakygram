@@ -13,9 +13,13 @@ $ npm run dev
 
 In Chrome navigate to `chrome://inspect`
 
-Find the correct remote to debug. If not present add it: 
+If no debugging targets are available. Add them:
 
-![Add the node inspector url](./devices-chrome.png)
+<img width="300" alt="Add the node inspector URL" src="./devices-chrome.png">
+
+For this app the correct target is this one:
+
+<img width="300" alt="Correct target" src="./chrome-target.png">
 
 **The application's debugger url is the one running on port 9230**
 
