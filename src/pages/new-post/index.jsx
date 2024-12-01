@@ -12,6 +12,9 @@ export default function GeneratePostPage() {
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
+    if (!file) {
+      return;
+    }
     setImage(file);
 
     // Create a preview of the image
